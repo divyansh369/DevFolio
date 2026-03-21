@@ -63,4 +63,3 @@ Edit colors in `App.css`:
 - Animations optimized for performance
 - Mobile hamburger menu included
 
-Bhai enjoy! 🔥
