@@ -1,0 +1,33 @@
+footer {
+  background: #111008;
+  color: #f4f0e6;
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition: background 0.4s;
+}
+[data-theme="dark"] footer {
+  background: #000000;
+}
+.footer-quote {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(244, 240, 230, 0.55);
+  max-width: 400px;
+}
+.footer-copy {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(244, 240, 230, 0.35);
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

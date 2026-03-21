@@ -1,0 +1,73 @@
+#about .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+#about .about-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+#about .about-text h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+#about .about-text p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition:
+    background 0.4s,
+    border-color 0.4s;
+}
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), var(--teal));
+}
+.about-stat {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.4s;
+}
+.about-stat:last-child {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.stat-num {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+@media (max-width: 768px) {
+  #about .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

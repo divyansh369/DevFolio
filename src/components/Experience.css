@@ -1,0 +1,93 @@
+#experience {
+  background: var(--card);
+  transition: background 0.4s;
+}
+#experience h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+#experience h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 3rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    var(--teal),
+    transparent
+  );
+  z-index: 0;
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
+}
+.tl-dot {
+  position: absolute;
+  left: -2.35rem;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--paper);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    background 0.4s,
+    border-color 0.4s;
+}
+.tl-item:hover .tl-dot {
+  transform: scale(1.5);
+  box-shadow: 0 0 0 4px var(--glow);
+}
+.tl-period {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.tl-role {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.tl-company {
+  font-size: 0.75rem;
+  color: var(--teal);
+  margin-bottom: 0.85rem;
+  font-weight: 500;
+}
+.tl-points {
+  list-style: none;
+}
+.tl-points li {
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+.tl-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
